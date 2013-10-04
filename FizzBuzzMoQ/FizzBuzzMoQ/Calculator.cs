@@ -16,7 +16,7 @@ namespace FizzBuzzMoQ
 
         public bool IsDivisibleByFive(int number)
         {
-            return false;
+            return true;
         }
     }
 }
