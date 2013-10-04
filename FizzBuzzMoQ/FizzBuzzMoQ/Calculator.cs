@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace FizzBuzzMoQ
 {
-    public class Calculator
+    public class Calculator : ICalculator
     {
         public bool IsDivisibleByThree(int number)
         {
@@ -16,7 +16,7 @@ namespace FizzBuzzMoQ
 
         public bool IsDivisibleByFive(int number)
         {
-            return true;
+            return number % 5 == 0;
         }
     }
 }
