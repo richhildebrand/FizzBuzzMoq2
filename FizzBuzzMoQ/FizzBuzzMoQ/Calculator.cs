@@ -7,7 +7,16 @@ namespace FizzBuzzMoQ
     {
         public bool IsDivisibleByThree(int number)
         {
-            return true;
+            if (number / 3 == (double)number / 3)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool IsDivisibleByFive(int number)
+        {
+            return false;
         }
     }
 }

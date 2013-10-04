@@ -18,7 +18,7 @@ namespace Tests.CalculatorTests
 
         [Test]
         public void ReturnFalseIfNumberIsNotDivisibleByThree()
-        {
+        { 
             var calculator = new Calculator();
             var isDivisibleByThree = calculator.IsDivisibleByThree(4);
 
