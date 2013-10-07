@@ -23,5 +23,18 @@ namespace Tests.WordGetterTests
 
             Assert.AreEqual(result, "Fizz");
         }
+
+        [Test]
+        public void ReturnNumberIfNumberIsNotDivisibleByThree()
+        {
+            var mockedCalculator = new Mock<ICalculator>();
+            var wordGetter = new WordGetter(mockedCalculator.Object);
+
+            mockedCalculator.Setup(mc => mc.IsDivisibleByThree(It.IsAny<int>())).Returns(false);
+
+            var result = wordGetter.GetFizzIfRequired(7);
+
+            Assert.AreNotEqual(result, "Fizz");
+        }
     }
 }
