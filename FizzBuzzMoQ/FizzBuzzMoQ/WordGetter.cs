@@ -13,7 +13,7 @@ namespace FizzBuzzMoQ
         }
 
         public string GetFizzIfRequired(int number) {
-            throw new NotImplementedException();  
+            return "Fizz";
         }
     }
 }
