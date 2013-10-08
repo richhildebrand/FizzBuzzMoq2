@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace FizzBuzzMoQ
 {
-    public class WordGetter
+    public class WordGetter : IWordGetter
     {
         private readonly ICalculator _calculator;
 
@@ -12,8 +12,10 @@ namespace FizzBuzzMoQ
             this._calculator = calculator;
         }
 
-        public string GetFizzIfRequired(int number) {
-            return "Fizz";
+
+        public string GetFizzIfRequired(int number)
+        {
+            return _calculator.IsDivisibleByThree(number) ? "Fizz" : number.ToString();
         }
     }
 }
