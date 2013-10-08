@@ -12,6 +12,11 @@ namespace FizzBuzzMoQ
             this._calculator = calculator;
         }
 
+        public string GetBuzzIfRequired(int number)
+        {
+            // TODO: Implement this method
+            throw new NotImplementedException();
+        }
 
         public string GetFizzIfRequired(int number)
         {
