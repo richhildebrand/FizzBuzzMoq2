@@ -21,5 +21,18 @@ namespace Tests.AppTests
 
             Assert.True(result.Contains("Buzz"));
         }
+
+        [Test]
+        public void ReturnFizzIfRequired()
+        {
+            var mockedWordGetter = new Mock<IWordGetter>();
+            var app = new App(mockedWordGetter.Object);
+
+            mockedWordGetter.Setup(wg => wg.GetFizzIfRequired(It.IsAny<int>())).Returns("Fizz");
+
+            var result = app.Run(7);
+
+            Assert.True(result.Contains("Fizz"));
+        }
     }
 }
