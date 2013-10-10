@@ -14,8 +14,7 @@ namespace FizzBuzzMoQ
 
         public string GetBuzzIfRequired(int number)
         {
-            //TODO: Implement this method
-            throw new NotFiniteNumberException();
+            return _calculator.IsDivisibleByFive(number) ? "Buzz" : number.ToString();
         }
 
         public string GetFizzIfRequired(int number)

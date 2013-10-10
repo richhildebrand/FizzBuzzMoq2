@@ -10,7 +10,7 @@ namespace Tests.WordGetterTests
     class GetBuzzIfRequiredShould
     {
         [Test]
-        public void ReturnBuzzIfNumberIsDivisibleByThree()
+        public void ReturnBuzzIfNumberIsDivisibleByThreeFive()
         {
             var mockedCalculator = new Mock<ICalculator>();
             var wordGetter = new WordGetter(mockedCalculator.Object);
@@ -22,7 +22,7 @@ namespace Tests.WordGetterTests
         }
 
         [Test]
-        public void ReturnNumberIfNumberIsNotDivisibleByThree()
+        public void ReturnNumberIfNumberIsNotDivisibleByFive()
         {
             var mockedCalculator = new Mock<ICalculator>();
             var wordGetter = new WordGetter(mockedCalculator.Object);
