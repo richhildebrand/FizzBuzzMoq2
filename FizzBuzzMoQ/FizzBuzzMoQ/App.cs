@@ -14,7 +14,7 @@ namespace FizzBuzzMoQ
 
         public string Run(int number)
         {
-            throw new NotImplementedException();
+            return _wordGetter.GetBuzzIfRequired(number);
         }
     }
 }

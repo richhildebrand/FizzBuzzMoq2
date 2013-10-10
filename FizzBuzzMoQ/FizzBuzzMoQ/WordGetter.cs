@@ -14,8 +14,8 @@ namespace FizzBuzzMoQ
 
         public string GetBuzzIfRequired(int number)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            //TODO: Implement this method
+            throw new NotFiniteNumberException();
         }
 
         public string GetFizzIfRequired(int number)
