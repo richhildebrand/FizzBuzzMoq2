@@ -16,6 +16,7 @@ namespace Tests.AppTests
             var app = new App(mockedWordGetter.Object);
 
             mockedWordGetter.Setup(wg => wg.GetBuzzIfRequired(It.IsAny<int>())).Returns("Buzz");
+            mockedWordGetter.Setup(wg => wg.GetFizzIfRequired(It.IsAny<int>())).Returns((int x) => x.ToString());
 
             var result = app.Run(7);
 

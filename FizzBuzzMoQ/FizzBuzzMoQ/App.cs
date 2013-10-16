@@ -14,7 +14,12 @@ namespace FizzBuzzMoQ
 
         public string Run(int number)
         {
-            return _wordGetter.GetBuzzIfRequired(number);
+            string fizzedNumber = _wordGetter.GetFizzIfRequired(number);
+            if(fizzedNumber.Equals(number.ToString()))
+            {
+                return _wordGetter.GetBuzzIfRequired(number);
+            }
+            return fizzedNumber;
         }
     }
 }
