@@ -19,7 +19,7 @@ namespace FizzBuzzMoQ
             {
                 return _wordGetter.GetBuzzIfRequired(number);
             }
-            return fizzedNumber;
+            return fizzedNumber + _wordGetter.GetBuzzIfRequired(number);
         }
     }
 }

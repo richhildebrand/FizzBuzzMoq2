@@ -49,5 +49,6 @@ namespace Tests.AppTests
 
             Assert.AreEqual("FizzBuzz", result);
         }
+
     }
 }
