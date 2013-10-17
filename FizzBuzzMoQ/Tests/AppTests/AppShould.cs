@@ -50,5 +50,19 @@ namespace Tests.AppTests
             Assert.AreEqual("FizzBuzz", result);
         }
 
+        [Test]
+        public void ReturnNumberIfNeitherFizzNorBuzzIsRequired()
+        {
+            var mockedWordGetter = new Mock<IWordGetter>();
+            var app = new App(mockedWordGetter.Object);
+            var number = 8;
+
+            mockedWordGetter.Setup(wg => wg.GetFizzIfRequired(It.IsAny<int>())).Returns(number.ToString());
+            mockedWordGetter.Setup(wg => wg.GetBuzzIfRequired(It.IsAny<int>())).Returns(number.ToString());
+
+            var result = app.Run(number);
+
+            Assert.AreEqual("FizzBuzz", result);
+        }
     }
 }
