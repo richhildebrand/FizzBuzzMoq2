@@ -62,7 +62,7 @@ namespace Tests.AppTests
 
             var result = app.Run(number);
 
-            Assert.AreEqual("FizzBuzz", result);
+            Assert.AreEqual(number.ToString(), result);
         }
     }
 }
